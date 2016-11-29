@@ -66,3 +66,39 @@ puts "see below the different steps to folow"
 steps.each_with_index do |step, index|
   puts (index + 1).to_s + ")" + step[:description]
 end
+
+def generic_recipe_step
+  puts "on it!"
+  print_progress_bar
+end
+
+def scrape_potatoes
+  counter = 0
+  while counter < NUM_POTATOES
+    counter += 1
+    print "scraping potato #{counter}"
+    print_progress_bar
+  end
+end
+def cut_potatoes
+  counter = 0
+  while counter < NUM_POTATOES
+    counter += 1
+    print "Cutting potato #{counter} into thick slices"
+    print_progress_bar
+  end
+end
+def add_potatoes_to_pan
+  for counter in 1..NUM_POTATOES
+    print "Adding potato #{counter} to the pan."
+    print_progress_bar
+  end
+end
+def break_eggs
+  counter = 0
+  while counter < NUM_EGGS
+    counter += 1
+    print "Breaking egg #{counter}"
+    print_progress_bar
+  end
+end
